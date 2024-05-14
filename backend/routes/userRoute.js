@@ -3,8 +3,6 @@ const {
   registerUser,
   loginUser,
   logoutUser,
-  forgetPassword,
-  resetPassword,
   getUserDetails,
   updatePassword,
   updateProfile,
@@ -20,10 +18,6 @@ const router = express.Router();
 router.route("/register").post(registerUser);//done
 
 router.route("/login").post(loginUser);//done
-
-router.route("/password/forgot").post(forgetPassword);
-
-router.route("/password/reset/:token").put(resetPassword);
 
 router.route("/logout").get(logoutUser);//done
 
