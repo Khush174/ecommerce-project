@@ -64,10 +64,10 @@ const UserOptions = ({ user }) => {
         className="speedDial"
         icon={
           <img
-            className="speedDialIcon"
-            src={user.avatar.url ? user.avatar.url : "/Profile.png"}
-            alt="Profile"
-          />
+  className="speedDialIcon"
+  src={user && user.avatar && user.avatar.url ? user.avatar.url : "/Profile.png"}
+  alt="Profile"
+/>
         }
       >
         {options.map((item) => (
