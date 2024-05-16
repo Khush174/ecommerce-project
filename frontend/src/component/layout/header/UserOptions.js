@@ -50,7 +50,7 @@ const UserOptions = ({ user }) => {
     navigate("/");
     console.log("Logout Successfully");
   }
-
+  const avatarSource = user && user.avatar && user.avatar.url ? user.avatar.url : "/Profile.png";
   return (
     <>
       <Backdrop open={open} style={{ zIndex: "10" }} />
@@ -64,10 +64,10 @@ const UserOptions = ({ user }) => {
         className="speedDial"
         icon={
           <img
-  className="speedDialIcon"
-  src={user && user.avatar && user.avatar.url ? user.avatar.url : "/Profile.png"}
-  alt="Profile"
-/>
+            className="speedDialIcon"
+            src={avatarSource}
+            alt="Profile"
+          />
         }
       >
         {options.map((item) => (
