@@ -21,7 +21,7 @@ const Profile = () => {
         <Loader />
       ) : (
         <>
-          <MetaData title={`${user.name}'s Profile`} />
+         <MetaData title={user ? `${user.name}'s Profile` : "User Profile"} />
           <div className="profileContainer">
             <div>
               <h1>My Profile</h1>
