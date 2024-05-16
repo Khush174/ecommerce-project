@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import CheckoutSteps from "../Cart/CheckoutStep";
 import { useSelector, useDispatch } from "react-redux";
 import MetaData from "../layout/MetaData";
-import { Typography } from "@material-ui/core";
+import { Typography } from '@mui/material';
 import {
   CardNumberElement,
   CardCvcElement,

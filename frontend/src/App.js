@@ -5,7 +5,7 @@ import Header from "./component/layout/header/Header"
 import Home from "./component/Home/Home";
 import Contact from "./component/layout/contact/Contact.js";
 import About from './component/layout/about/About.js';
-// import WebFont from "webfontloader";
+// import WebFont from "@types/webfontloader";
 import Footer from './component/layout/footer/Footer';
 import ProductDetails from './component/Product/ProductDetails';
 import Products from './component/Product/Products';
