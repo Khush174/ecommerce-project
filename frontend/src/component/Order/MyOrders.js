@@ -27,24 +27,7 @@ const MyOrders = () => {
             headerName: "Status",
             minWidth: 150,
             flex: 0.5,
-            // cellClassName: (params) => {
-            //     console.log("params.value",params)
-            //     return (params.row.status) === "Delivered"
-            //         ? "greenColor   "
-            //         : "redColor";
-            // },
-            // cellStyle: params => {
-            //     console.log("params.value", params.value)
-            //     if (params.value === 'Delivered') {
-            //         debugger
-            //         //mark police cells as red
-            //         return { color: 'green !important', };
-            //     }
-            //     else {
-            //         debugger
-            //         return { color: 'red !important', };
-            //     }
-            // }
+           
             cellClass: params => {
                 return params.value === 'Delivered' ? 'redColor' : 'redColor';
             },
@@ -119,7 +102,7 @@ const MyOrders = () => {
                         autoHeight
                     />
 
-                    <Typography id="myOrdersHeading">{user.name}'s Orders</Typography>
+                    <Typography id="MyOrdersHeading">{user && user.name ? `${user.name}'s Orders` : "My Orders"}</Typography>
                 </div>
             )}
         </Fragment>
