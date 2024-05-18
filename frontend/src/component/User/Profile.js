@@ -40,8 +40,12 @@ const Profile = () => {
                 {user ? <p>{user.email}</p> : <p>Loading...</p>}
               </div>
               <div>
-                <h4>Joined On</h4>
-                <p>{String(user.createdAt).substring(0, 10)}</p>
+              <h4>Joined On</h4>
+                {user && user.createdAt ? (
+                  <p>{String(user.createdAt).substring(0, 10)}</p>
+                ) : (
+                  <p>Loading...</p>
+                )}
               </div>
 
               <div>
