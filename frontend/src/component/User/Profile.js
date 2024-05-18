@@ -33,11 +33,11 @@ const Profile = () => {
             <div>
               <div>
                 <h4>Full Name</h4>
-                <p>{user.name}</p>
+                {user ? <p>{user.name}</p> : <p>Loading...</p>}
               </div>
               <div>
                 <h4>Email</h4>
-                <p>{user.email}</p>
+                {user ? <p>{user.email}</p> : <p>Loading...</p>}
               </div>
               <div>
                 <h4>Joined On</h4>
