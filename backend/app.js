@@ -30,6 +30,10 @@ app.use("/api/v1", user);
 app.use("/api/v1/", order);
 app.use("/api/v1", payment);
 
+app.get("/hello-world",(req,res) => {
+    return res.json("hello world")
+})
+
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
