@@ -1,28 +1,22 @@
-import React,{useRef, useState, useEffect} from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./LoginSignUp.css";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
 import Loader from "../layout/loader/Loader";
-import {Link} from "react-router-dom";
-import EmailIcon from '@mui/icons-material/Email';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from "react-router-dom";
+import EmailIcon from "@mui/icons-material/Email";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 // import { useAlert } from "react-alert";
 
-
 const LoginSignUp = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
   // const alert = useAlert();
 
-
-
-  const { error, loading, isAuth } = useSelector(
-    (state) => state.user
-  );
+  const { error, loading, isAuth } = useSelector((state) => state.user);
 
   const loginTab = useRef(null);
   const registerTab = useRef(null);
@@ -76,10 +70,8 @@ const LoginSignUp = () => {
     }
   };
 
-
   useEffect(() => {
     if (error) {
-      // alert.error(error);
       dispatch(clearErrors());
     }
 
@@ -141,7 +133,6 @@ const LoginSignUp = () => {
                     onChange={(e) => setLoginPassword(e.target.value)}
                   />
                 </div>
-                <Link to="/password/forgot">Forget Password ?</Link>
                 <input type="submit" value="Login" className="loginBtn" />
               </form>
               <form
